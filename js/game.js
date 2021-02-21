@@ -62,7 +62,7 @@ class Game{
 
         
 
-        if(keyDown('D') || keyDown('d') && dead == false || touches.length >0){
+        if(keyDown('D') || keyDown('d') && dead == false || touches.length >0 && player.overlapPoint( touches[0].x, touches[0].y)){
             player.x = player.x + 20;
             facingRight = true;
             facingLeft = false;
@@ -70,7 +70,7 @@ class Game{
              touches=[];
             
         }
-        else if(keyDown('A') || keyDown('a') && dead == false || touches.length >0){
+        else if(keyDown('A') || keyDown('a') && dead == false || touches.length  > 0 && player.overlapPoint( touches[0].x, touches[0].y)){
             player.x = player.x - 20;
             facingLeft = true;
             facingRight = false;
