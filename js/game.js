@@ -67,7 +67,7 @@ class Game{
             facingRight = true;
             facingLeft = false;
              player.changeAnimation("w",playerWalk);
-             touches=[];
+             //touches=[];
             
         }
         else if(keyDown('A') || keyDown('a') && dead == false || touches.length  > 0 && player.overlapPoint( touches[0].x, touches[0].y)){
@@ -76,7 +76,7 @@ class Game{
             facingRight = false;
 
             player.changeAnimation("w",playerWalk);
-            touches=[];
+            //touches=[];
             
         }
         else{
